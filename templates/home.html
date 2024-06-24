@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Pclass" placeholder="Pclass" required="required" /><br>
+    	<input type="text" name="Sex" placeholder="Sex" required="required" /><br>
+        <input type="text" name="Fare" placeholder="Fare" required="required" /><br>
+        <input type="text" name="isCabin" placeholder="isCabin" required="required" /><br>
+        <input type="text" name="Age_Cat" placeholder="Age_Cat" required="required" /><br>
+        <input type="text" name="C" placeholder="C" required="required" /><br>
+        <input type="text" name="S" placeholder="S" required="required" /><br>
+        <input type="text" name="Miss" placeholder="Miss" required="required" /><br>
+        <input type="text" name="Mr" placeholder="Mr" required="required" /><br>
+        <input type="text" name="Mrs" placeholder="Mrs" required="required" /><br>
+        <input type="text" name="other" placeholder="other" required="required" /><br>
+        <input type="text" name="Family" placeholder="Family" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
