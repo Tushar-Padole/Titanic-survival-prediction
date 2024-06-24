@@ -35,7 +35,8 @@ def predict_api():
     new_data=titanic_scaling.transform(np.array(list(data.values())).reshape(1, -1) )
     output=titanic_model.predict(new_data)
     print(output[0])
-    return jsonify(output[0])'''
+    return jsonify(output[0])
+    '''
 
 @app.route('/predict',methods=['POST'])
 def predict():
